@@ -41,16 +41,22 @@
 
     function main() {
         const canvas = document.querySelector('#c');
-        const renderer = new THREE.WebGLRenderer({ canvas });
+        const renderer = new THREE.WebGLRenderer({
+            canvas,
+            antialias: true,
+            alpha: true
+        });
         renderer.outputEncoding = THREE.sRGBEncoding;
 
+        //下面4个都是相机属性
         const fov = 45;
         const aspect = 2;  // the canvas default
         const near = 0.1;
         const far = 100;
         const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-        camera.position.set(0, 10, 20);
+        camera.position.set(0, 10, 20);//相机默认位置
 
+        //控制器
         const controls = new OrbitControls(camera, canvas);
         controls.target.set(0, 5, 0);
         controls.update();
@@ -59,10 +65,10 @@
         scene.background = new THREE.Color('black');
 
         {
-            const planeSize = 400;
+            const planeSize = 400;//载物台大小
 
             const loader = new THREE.TextureLoader();
-            const texture = loader.load('img/dirt.png');
+            const texture = loader.load('img/dirt.png');//载物台贴图
             //https://threejs.org/manual/examples/resources/images/checker.png
             texture.encoding = THREE.sRGBEncoding;
             texture.wrapS = THREE.RepeatWrapping;
@@ -81,15 +87,15 @@
             scene.add(mesh);
         }
 
-        {
-            const skyColor = 0xB1E1FF;  // light blue
-            const groundColor = 0xB97A20;  // brownish orange
+        {//半球光，光源直接放置于场景之上，光照颜色从天空光线颜色渐变到地面光线颜色。
+            const skyColor = 0xB1E1FF;  // light blue 上半球发出光线的颜色0xB1E1FF
+            const groundColor = 0xB97A20;  // brownish orange 下半球发出光线的颜色0xB97A20
             const intensity = 1;
             const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
             scene.add(light);
         }
 
-        {
+        {//天空盒
             const loader = new THREE.CubeTextureLoader()
             const texture = loader.load([
                 './img/neg-y.png',
@@ -103,6 +109,10 @@
         }
 
         {
+            /*平行光，平行光是沿着特定方向发射的光。
+            这种光的表现像是无限远,从它发出的光线都是平行的。
+            常常用平行光来模拟太阳光的效果; 
+            太阳足够远，因此我们可以认为太阳的位置是无限远，所以我们认为从太阳发出的光线也都是平行的。*/
             const color = 0xFFFFFF;
             const intensity = 1;
             const light = new THREE.DirectionalLight(color, intensity);
@@ -111,15 +121,37 @@
             scene.add(light.target);
         }
 
-        {
+        {//https://threejs.org/manual/examples/resources/models/windmill/windmill-fixed.mtl
+            //加载材质
             const mtlLoader = new MTLLoader();
-            mtlLoader.load('https://threejs.org/manual/examples/resources/models/windmill/windmill-fixed.mtl', (mtl) => {
+            mtlLoader.load('models/cube.mtl', (mtl) => {
                 mtl.preload();
+                //加载模型
                 const objLoader = new OBJLoader();
                 mtl.materials.Material.side = THREE.DoubleSide;
                 objLoader.setMaterials(mtl);
-                objLoader.load('models/KeQing.obj', (root) => {
+                objLoader.load('models/昆明圆通大桥.obj', (root) => {
+
+                    //克隆模型
+                    var obj1 = root.clone();
+                    var obj2 = root.clone();
+                    var obj3 = root.clone();
+                    var obj4 = root.clone();
+
+                    //向场景中添加模型
                     scene.add(root);
+                    scene.add(obj1);
+                    scene.add(obj2);
+                    scene.add(obj3);
+                    scene.add(obj4);
+
+                    //修改模型的位置
+                    root.position.set(0, 1.5, 0);
+                    obj1.position.set(21, 1.5, 0);
+                    obj2.position.set(42, 1.5, 0);
+                    obj3.position.set(63, 1.5, 0);
+                    obj4.position.set(84, 1.5, 0);
+
                 });
             });
         }
