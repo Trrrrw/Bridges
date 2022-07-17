@@ -130,7 +130,7 @@
                 const objLoader = new OBJLoader();
                 mtl.materials.Material.side = THREE.DoubleSide;
                 objLoader.setMaterials(mtl);
-                objLoader.load('models/昆明圆通大桥.obj', (root) => {
+                objLoader.load('models/钱塘江大桥（重建）.obj', (root) => {
 
                     //克隆模型
                     var obj1 = root.clone();
@@ -145,12 +145,20 @@
                     scene.add(obj3);
                     scene.add(obj4);
 
+                    //修改模型大小
+                    root.scale.set(3, 3, 3);
+                    obj1.scale.set(3, 3, 3);
+                    obj2.scale.set(3, 3, 3);
+                    obj3.scale.set(3, 3, 3);
+                    obj4.scale.set(3, 3, 3);
+
                     //修改模型的位置
-                    root.position.set(0, 1.5, 0);
-                    obj1.position.set(21, 1.5, 0);
-                    obj2.position.set(42, 1.5, 0);
-                    obj3.position.set(63, 1.5, 0);
-                    obj4.position.set(84, 1.5, 0);
+                    //钱塘江-36；昆明圆通大桥-21；
+                    root.position.set(0, 1, 0);
+                    obj1.position.set(0, 1, -18);
+                    obj2.position.set(0, 1, 18);
+                    obj3.position.set(0, 1, 36);
+                    obj4.position.set(0, 1, -36);
 
                 });
             });
