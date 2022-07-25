@@ -11,6 +11,15 @@
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//s.w.org' />
     <style>
+        table,
+        table tr th,
+        table tr td {
+            border: 1px solid #000000;
+            width: "100%";
+            word-break: keep-all;
+            text-align: center;
+        }
+
         .single-featured-image-header {
             position: relative;
         }
@@ -580,29 +589,21 @@
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
         var i = 0;
-        var max = 19;//图片数量-1
+        var max = 11;//图片数量-1
         var min = 0;
         var imgs = new Array();
-        imgs[0] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-019.webp";
-        imgs[1] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-001.webp";
-        imgs[2] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-004.webp";
-        imgs[3] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-005.webp";
-        imgs[4] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-007.webp";
-        imgs[5] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-008.webp";
-        imgs[6] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-009.webp";
-        imgs[7] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-010.webp";
-        imgs[8] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-011.webp";
-        imgs[9] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-012.webp";
-        imgs[10] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-013.webp";
-        imgs[11] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-014.webp";
-        imgs[12] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-016.webp";
-        imgs[13] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-018.webp";
-        imgs[14] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-019.webp";
-        imgs[15] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-001.webp";
-        imgs[16] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-004.webp";
-        imgs[17] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-005.webp";
-        imgs[18] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-007.webp";
-        imgs[19] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-008.webp";
+        imgs[0] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-006.webp";
+        imgs[1] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-001.webp";
+        imgs[2] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-002.webp";
+        imgs[3] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-004.webp";
+        imgs[4] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-005.webp";
+        imgs[5] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-003.webp";
+        imgs[6] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-007.webp";
+        imgs[7] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-008.webp";
+        imgs[8] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-009.webp";
+        imgs[9] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-010.webp";
+        imgs[10] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-011.webp";
+        imgs[11] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-012.webp";
         $(document).ready(function () {
             $("#Loadmod").click(
                 function () {
@@ -690,13 +691,13 @@
                     <div class="single-featured-image-header">
                         <div class="inner">
                             <p class="site-title" style="position: absolute; padding: 10%;">
-                                银 滩 黄 河 大 桥</br>甘肃省兰州市七里河区</p>
+                                崇 启 大 桥</br>江苏省南通市启东市</p>
 
                             <div class="nav-next"></div>
                             <div class="nav-previous"></div>
                         </div>
                         <img id="jiaozhou" width="2000" height="1000"
-                            src="https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-兰州-银滩黄河大桥-019.webp"
+                            src="https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-南通启东-上海-崇启大桥-006.webp"
                             class="attachment-twentyseventeen-featured-image size-twentyseventeen-featured-image wp-post-image"
                             alt="" loading="lazy" sizes="100vw" />
                     </div>
@@ -707,20 +708,20 @@
                         <section id="text-6" class="widget widget_text">
                             <h2 class="widget-title">建成日期</h2>
                             <div class="textwidget">
-                                <p>2001年</p>
+                                <p>2011年12月</p>
                             </div>
                         </section>
                         <section id="text-12" class="widget widget_text">
                             <h2 class="widget-title">地址</h2>
                             <div class="textwidget">
-                                <p>甘肃省兰州市</p>
+                                <p>崇启大桥位于上海市东北部、江苏省南通市东南部，连接上海市崇明区与江苏省南通市启东市。</p>
                             </div>
                         </section>
                         <section id="text-11" class="widget widget_text">
                             <h2 class="widget-title">工程设计师或施工方</h2>
                             <div class="textwidget">
                                 <div class="textwidget">
-                                    <p>铁道部第一勘探设计院设计，铁道部第二工程局施工</p>
+                                    <p>无</p>
                                 </div>
                             </div>
                         </section>
@@ -728,7 +729,7 @@
                             <h2 class="widget-title">简介</h2>
                             <div class="textwidget">
                                 <div class="textwidget">
-                                    <p>银滩黄河大桥是兰州市城市交通枢纽工程，北与银滩路、北滨河路相连，南与南滨河路相接，是连接安宁区和七里河区的重要通道，北通兰州中川国际机场，南达西北最大的货物编组站——兰州北站。桥长803.48m，总投资1.7亿元，于1997年开工建设，2001年竣工通车，洪水流动流量为每秒6300立方米。
+                                    <p>崇启大桥，是中国连接上海市与江苏省的过江通道，位于长江入海口处，是中国高速上海—西安高速公路（国家高速G40）的重要组成部分之一、长三角高速公路网规划的城际通道，也是上海第一条直通苏北地区的高速公路。</br>崇启大桥于2008年8月1日动工兴建；于2011年2月25日完成主桥合龙工程，大桥全线贯通；于2011年12月24日通车运营。</br>崇启大桥线路北起南通市启东南互通，上跨长江水道，南至崇明区向化公路跨线桥；线路全长51.763千米，跨江大桥长6.84千米；桥面为双向六车道高速公路，设计速度100千米/小时；项目总投资82.38亿元人民币。
                                     </p>
                                 </div>
                             </div>
@@ -743,29 +744,132 @@
                                 class="post-99 post type-post status-publish format-audio has-post-thumbnail hentry category-uncategorized post_format-post-format-audio">
 
                                 <video controls width="100%" style="height: 20em;">
-                                    <source src="./../video/2001-兰州-银滩黄河大桥.mp4" type="video/mp4">
+                                    <source src="./../video/2011-南通启东-上海-崇启大桥.mp4" type="video/mp4">
                                 </video>
                                 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
 
 
                                 <div class="entry-content">
                                     <h4 id="title0">意义</h4>
-                                    <p>&emsp;&emsp;银滩大桥横跨黄河南北两岸，背起安宁南至七里河区马滩村，主体投资1．8亿元，是我国完全由自己设计的、代表了当今桥梁建筑最高水平的独索双面斜拉桥，也是我国在高地震烈度地区修建的第一座大型斜拉桥。银滩黄河大桥的建成，不但使我国桥梁建筑领域从此少了一个“禁区”，更标志着甘肃省以及整个西部地区的桥梁建筑水平又迈上了一个新的台阶。
+                                    <p>&emsp;&emsp;崇启大桥的实施，与上海至崇明越江通道共同构成了上海—西安高速公路的过江通道，在长江口形成一条完整的南北向过江交通走廊，极大地缩短了江苏东部地区至上海、上海浦东地区的出行距离，给该地区的交通出行带来极大的便利，给江苏东部地区的发展带来了机遇，也为上海市及浦东地区经济向北辐射提供了便利通道。
                                     </p>
 
                                     <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
-                                    <h4 id="title1">桥梁结构</h4>
-
-                                    <p>&emsp;&emsp;主桥长803.48米，桥面宽25.
-                                        5米，主跨2孔、跨径133米，副跨19孔、跨径40米，采用单塔斜拉结构，塔高79米，共124根斜拉索，索长32～140米，主桥桩呈“H”形，主桥桩的两边各有30对钢丝绳斜拉在主桥桩上，形成一个等腰三角形。三角形具有稳定性，设计师也许正是利用这个原理而设计的。主桥墩两边各有16个引桥墩。
+                                    <h4 id="title1">设计特点</h4>
+                                    <p>&emsp;&emsp;崇启大桥主桥采用六跨钢连续梁桥，分上下行分幅布置，其中，上部结构采用变截面钢箱梁，下部结构采用混凝土墩柱结合钻孔桩承台基础；南引桥为预制悬拼混凝土连续梁桥，北引桥为现浇混凝土连续梁桥；主梁采用双幅变截面的直腹板钢连续箱梁，钢箱梁顶、底板为正交异性板结构，顶板设有U形肋、底板设有T形肋和板式加劲肋；横桥向设置两道腹板，腹板设有板式加劲肋；横隔板采用实腹板式和桁架式两种形式，腹板外侧横隔板和横肋对应位置设置挑臂。主桥中间墩设置固定支座，其他主墩与过渡墩均设置纵向滑动支座；主桥墩身采用矩形倒圆角花瓶形，按左右两幅分离式布置，为钻孔灌注桩，呈梅花形布置；墩身混凝土采用C45高性能海工砼。
                                     </p>
+
+                                    <h4>设计参数</h4>
+                                    <p>&emsp;&emsp;崇启大桥线路全长51.763千米，跨江大桥长6.84千米，宽33.2米，采用（102+4×185+102）米的跨径布置，其中，上海段跨江大桥长2.296千米，江苏段跨江大桥长4.544千米。钢箱粱边跨端部梁高3.5米，中跨跨中梁高4.8米，主墩处根部梁高9.0米；钢箱梁单幅梁宽16.1米，箱体宽度7.5米。主墩平面尺寸为（5x8）平方米，墩高25米，墩身壁厚1.0米；主墩基础钻孔灌注桩直接2.2米，承台底共计26根桩，桩长88.5米；承台尺寸为（38.4x21.3）平方米，厚5.5米。
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <th colspan="2">
+                                                技术标准
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                公路等级
+                                            </td>
+                                            <td>
+                                                高速公路
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                设计速度
+                                            </td>
+                                            <td>
+                                                100千米/小时
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                车道设置
+                                            </td>
+                                            <td>
+                                                双向六车道
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                荷载标准
+                                            </td>
+                                            <td>
+                                                公路-Ⅰ级
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                设计基准
+                                            </td>
+                                            <td>
+                                                100年
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                设计风速
+                                            </td>
+                                            <td>
+                                                41.1米/秒
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                净空标准
+                                            </td>
+                                            <td>
+                                                净宽：152米（单向）、288米（双向），净高：28.5米
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                通航水位
+                                            </td>
+                                            <td>
+                                                最高：4.31米，最低：-2.41米
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                洪水频率
+                                            </td>
+                                            <td>
+                                                1次/300年
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                抗震等级
+                                            </td>
+                                            <td>
+                                                按VII度设防
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <h4>主要科技创新与新技术应用</h4>
+                                    <ol>
+                                        <li>主桥采用主跨185米的大跨度变截面连续钢箱梁，引桥采用50米的跨径节段预制整孔拼装预应力混凝土连续梁，均创当时中国国内同类桥型跨径之最。</li>
+                                        <li>首次在中国国内大规模采用短线匹配预制逐跨悬挂拼装的施工工艺，研制了TP50型专用架桥机，跨径创当时中国国内之最。</li>
+                                        <li>首次在中国国内采用“整跨工厂无应力制造、滚装装船、整体架设、全过程实时监控”的先进施工技术，成功实现了最长185米、起吊重量最大2690吨的整跨钢箱梁制造安装。</li>
+                                        <li>为中国大型桥梁抑振探索了一套有效的TMD系统减振设计方法。</li>
+                                        <li>首次在混凝土桥面大规模采用单组分环氧沥青桥面防水粘结层（NKY）。</li>
+                                        <li>开展抗裂水稳碎石基层的应用研究，水稳基层平均裂缝间距由通常的10至15米提高到160米。</li>
+                                        <li>创建了平原区高速公路低路基设计原理与技术体系。</li>
+                                        <li>研发了长江口细砂填筑路基的结构体系与工程技术。</li>
+                                        <li>构建了绿色公路评价指标体系和生态恢复技术。</li>
+                                        <li>研发了细砂路基结构整治维护新技术。</li>
+                                    </ol>
                                 </div>
                             </article>
                             <nav class="navigation post-navigation" aria-label="文章">
                                 <h2 class="screen-reader-text">文章导航</h2>
                                 <div class="nav-links">
                                     <div class="nav-previous">
-                                        <a href="./../1995年 南津渡大桥/" rel="prev">
+                                        <a href="./../2008年 杭州湾跨海大桥/" rel="prev">
                                             <span class="screen-reader-text">上一篇文章</span>
                                             <span aria-hidden="true" class="nav-subtitle">上一篇</span>
                                             <span class="nav-title"><span class="nav-title-icon-wrapper">
@@ -773,12 +877,12 @@
                                                         <use href="#icon-arrow-left" xlink:href="#icon-arrow-left">
                                                         </use>
                                                     </svg>
-                                                </span>南津渡大桥</span>
+                                                </span>杭州湾跨海大桥</span>
                                         </a>
 
                                     </div>
                                     <div class="nav-next">
-                                        <a href="./../2001年 安顺廊桥/" rel="prev">
+                                        <a href="./../2011年 胶州湾大桥/" rel="prev">
                                             <span class="screen-reader-text">下一篇文章</span>
                                             <span aria-hidden="true" class="nav-subtitle">下一篇</span>
                                             <span class="nav-title"><span class="nav-title-icon-wrapper">
@@ -786,7 +890,7 @@
                                                         <use href="#icon-arrow-right" xlink:href="#icon-arrow-right">
                                                         </use>
                                                     </svg>
-                                                </span>安顺廊桥</span>
+                                                </span>胶州湾大桥</span>
                                         </a>
 
                                     </div>
