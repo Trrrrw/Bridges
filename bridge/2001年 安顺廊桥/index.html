@@ -57,7 +57,7 @@
             width: 6em;
             height: 6em;
             margin-top: -3em;
-            background-image: url("./img/arrow.svg");
+            background-image: url("./../../img/arrow.svg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -540,7 +540,7 @@
     <link rel='stylesheet' id='twentyseventeen-style-css' href='./css/twentyseventeen-style.css' media='all' />
     <link rel='stylesheet' id='twentyseventeen-block-style-css' href='./css/twentyseventeen-assets-css-blocks.css'
         media='all' />
-    <!--[if lt IE 9]> <link rel='stylesheet' id='twentyseventeen-ie8-css'  href='http://localhost/wordpress/wp-content/themes/twentyseventeen/assets/css/ie8.css?ver=20161202' media='all' /> <![endif]-->
+
     <script>
         /* <![CDATA[ */
         var rcewpp = {
@@ -552,7 +552,7 @@
         };
             /* ]]\> */
     </script>
-    <!--[if lt IE 9]> <script src='http://localhost/wordpress/wp-content/themes/twentyseventeen/assets/js/html5.js?ver=20161020' id='html5-js'></script> <![endif]-->
+
     <script src='./js/jquery-jquery.min.js' id='jquery-core-js'></script>
     <script src='./js/jquery-jquery-migrate.min.js' id='jquery-migrate-js'></script>
     <link rel="https://api.w.org/" href="http://localhost/wordpress/wp-json/" />
@@ -576,45 +576,26 @@
         content="http://localhost/wordpress/wp-content/uploads/2022/07/cropped-NAU.png" />
 
 
-    <!-- JQuery.js -->
+
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
         var i = 0;
-        var max = 2;//图片数量-1
+        var max = 8;//图片数量-1
         var min = 0;
         var imgs = new Array();
-        imgs[0] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-011.webp";
-        imgs[1] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-010.webp";
-        imgs[2] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-009.webp";
+        imgs[0] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-002.webp";
+        imgs[1] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-001.webp";
+        imgs[2] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-003.webp";
+        imgs[3] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-004.webp";
+        imgs[4] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-005.webp";
+        imgs[5] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-006.webp";
+        imgs[6] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-007.webp";
+        imgs[7] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-008.webp";
+        imgs[8] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-009.webp";
         $(document).ready(function () {
-            
-
-            $("#passage1").hide();
-            $("#button2").hide();
-            $("#button1").click(
-                function () {
-                    $("#passage1").slideDown();
-                    $("#button1").hide();
-                    $("#button2").show();
-                }
-            );
-
-            $("#passage4").hide();
-            $("#hide4").hover(
-                function(){$("#passage4").slideDown();},
-                function(){$("#passage4").slideUp ();}
-            );
-
-            $("#button2").click(
-                function () {
-                    $("#passage1").slideUp();
-                    $("#button1").show();
-                    $("#button2").hide();
-                }
-            );
             $("#Loadmod").click(
                 function () {
-                    window.open("https://www.baidu.com", "_blank", "resizable,scrollbars,status");
+                    window.open("./model", "_blank", "resizable,scrollbars,status");
                 }
 
             );
@@ -654,12 +635,12 @@
                 <div class="site-branding">
                     <div class="wrap">
                         <div class="site-branding-text">
-                            <p class="site-title"><a href="http://localhost/wordpress/" rel="home">“桥”见中国，“智”见未来</a></p>
+                            <p class="site-title"><a href="./../../" rel="home">“桥”见中国，“智”见未来</a></p>
                             <p class="site-description"><strong>南京农业大学·人工智能学院</strong></p>
-                        </div><!-- .site-branding-text -->
-                    </div><!-- .wrap -->
-                </div><!-- .site-branding -->
-            </div><!-- .custom-header -->
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="navigation-top">
                 <div class="wrap">
                     <nav id="site-navigation" class="main-navigation" aria-label="顶部菜单"> <button class="menu-toggle"
@@ -681,17 +662,16 @@
                                 </li>
                                 <li id="menu-item-74"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a
-                                        target="_blank" rel="noopener"
-                                        href="./../../model/">模型</a></li>
+                                        target="_blank" rel="noopener" href="./../../model/">模型</a></li>
                                 <li id="menu-item-30"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a
                                         href="./../../about/index.html">关于</a></li>
                             </ul>
                         </div>
-                    </nav><!-- #site-navigation -->
-                </div><!-- .wrap -->
-            </div><!-- .navigation-top -->
-        </header><!-- #masthead -->
+                    </nav>
+                </div>
+            </div>
+        </header>
 
         <div class="site-content-contain">
             <div id="content" class="site-content">
@@ -699,16 +679,16 @@
                     <div class="single-featured-image-header">
                         <div class="inner">
                             <p class="site-title" style="position: absolute; padding: 10%;">
-                                胶 州 湾 大 桥</br>青岛市黄岛区G22青兰高速</p>
+                                安 顺 廊 桥</br>四川成都滨江东路</p>
 
                             <div class="nav-next"></div>
                             <div class="nav-previous"></div>
                         </div>
                         <img id="jiaozhou" width="2000" height="1000"
-                            src="https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-011.webp"
+                            src="https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2001-四川成都-九眼桥-002.webp"
                             class="attachment-twentyseventeen-featured-image size-twentyseventeen-featured-image wp-post-image"
                             alt="" loading="lazy" sizes="100vw" />
-                    </div><!-- .single-featured-image-header -->
+                    </div>
 
                     <aside id="secondary" class="widget-area" aria-label="博客边栏">
                         <button id="Loadmod" style="width: 100%;">查看模型</button>
@@ -716,20 +696,20 @@
                         <section id="text-6" class="widget widget_text">
                             <h2 class="widget-title">建成日期</h2>
                             <div class="textwidget">
-                                <p>2006年12月26日</p>
+                                <p>始建于明万历二十一年（1593），古九眼桥于1992年冬拆去。2001年11月，仿古九眼桥主体工程宣告建成。</p>
                             </div>
                         </section>
                         <section id="text-12" class="widget widget_text">
                             <h2 class="widget-title">地址</h2>
                             <div class="textwidget">
-                                <p>中国山东省青岛市</p>
+                                <p>成都市锦江区</p>
                             </div>
                         </section>
                         <section id="text-11" class="widget widget_text">
                             <h2 class="widget-title">工程设计师或施工方</h2>
                             <div class="textwidget">
                                 <div class="textwidget">
-                                    <p>赵英俊</p>
+                                    <p>无</p>
                                 </div>
                             </div>
                         </section>
@@ -737,112 +717,53 @@
                             <h2 class="widget-title">简介</h2>
                             <div class="textwidget">
                                 <div class="textwidget">
-                                    <p>胶州湾大桥（Jiaozhou Bay
-                                        Bridge）是中国山东省青岛市境内黄岛区、城阳区、李沧区以及胶州市的跨海通道，位于胶州湾之上，是山东省省级高速公路网的重要组成部分之一，也是青岛市区西北部城市主干道的构成部分之一。
-                                        胶州湾大桥于2006年12月26日动工兴建，时称“青岛海湾大桥”。胶州湾大桥东起李村河互通，上跨胶州湾，中接红岛互通立交，西至黄岛东枢纽立交；线路全长42.23千米、桥梁全长31.630千米；桥面为双向六车道高速公路，设计速度80千米/小时。
+                                    <p>九眼桥位于成都市锦江区，古名宏济桥，又名镇江桥，始建于明万历二十一年（1593），由当时布政使余一龙所建。系石栏杆、石桥面的大拱桥，长4宽3高3丈，下有9洞。在清朝乾隆五十三年（1788）由总督李世杰
+                                        补修时，改名为九眼桥。乾隆五十五年（1790）又加以重修。
+                                        1988年于九眼桥西侧新建交叉钢架水泥预制桥，从桥基点起算，长约120米，宽25米，桥北下端辟有汽车通道横贯东西，形成半立式交叉桥。1992年，鉴于旧九眼桥有碍泻洪而被拆除。1999年7月，成都市规划局古九眼桥异地重建方案出台，重建的九眼桥距原址仅1.9公里，2001年11月，仿古九眼桥主体工程宣告建成，仿古九眼桥仍为九孔，外部全由仿古青石块砌成。桥面用青石块铺设，保留具有明代建筑风格的九孔石拱桥形象。
                                     </p>
                                 </div>
                             </div>
                         </section>
                         <section id="block-8" class="widget widget_block">
                         </section>
-                    </aside><!-- #secondary -->
+                    </aside>
 
                     <div id="primary" class="content-area">
                         <main id="main" class="site-main">
                             <article id="post-99"
                                 class="post-99 post type-post status-publish format-audio has-post-thumbnail hentry category-uncategorized post_format-post-format-audio">
 
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/TmaAOV4SJNQ"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <video controls width="100%" style="height: 20em;">
+                                    <source src="./../video/2001-四川成都-九眼桥.mp4" type="video/mp4">
+                                </video>
                                 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
 
 
                                 <div class="entry-content">
                                     <h4 id="title0">意义</h4>
-                                    <p>&emsp;&emsp;显著缓解青岛胶州湾高速公路的交通压力，进一步完善青岛市东西跨海交通联系，扩大青岛市城市骨架，缩小青岛、红岛、黄岛的时空距离，加强主城区与两翼副城区的联系，塑造拥抱胶州湾的大青岛城市框架，为青岛城市的深度发展拓展出崭新空间，同时，胶州湾大桥结构新颖、造型独特、美观大气，三座航道桥与蜿蜒的非通航孔桥、海上互通立交等共同谱写了一部气势磅礴的桥梁组曲，既与青岛市的城市及建筑风格相呼应，又富有现代的气息，是国际屈指可数的现代化桥梁集群工程，该桥建成后将成为青岛市的又一标志性建筑，为中国桥梁史再添辉煌的一页。
+                                    <p>&emsp;&emsp;九眼桥承担了连接两岸进行通商交流的重大责任。</br>&emsp;&emsp;二十世纪五十年代以前，锦江是通往乐山、宜宾的重要水道，九眼桥一带也曾是热闹的码头所在。当时九眼桥的两岸有水陆码头，上下游河面上货船、客船云集，为川江重要物资集散地和交通枢纽，沿河而下，可通乐山、重庆、汉口等地。而九眼桥独特的九个大桥洞正是为了方便船只通过而设计的，这在当时的水运通商过程中起到了重要的经济作用，方便了船只的通行，同时极大程度保证了码头不会阻塞，能同时间容纳大量船只经过锦江。</br>&emsp;&emsp;如今，九眼桥已然成为了成都市的一张文化名片，围绕着它，成都修建了许多高楼大厦与繁华街区，一条长长的酒吧街穿插而过。它容纳着灯火璀璨，繁荣生机，却又饱含历史底蕴。在灯光照耀下，它映射出的不只有古桥的沉稳厚重，还有新时代城市发展过程中历史与人文气息的巧妙融合和城市建设的包容与大度。
                                     </p>
-                                    <!-- <div class="passage-wide"> -->
-                                    <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
-                                    <h4 id="title1">工程环境特点</h4>
 
-                                    <p>杭州湾气象复杂多变，台风、龙卷风、雷暴及突发性小范围灾害性天气时有发生。杭州湾自然条件有以下特点：</p>
+                                    <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
+                                    <h4 id="title1">研究价值</h4>
                                     <ol>
-                                        <li>&nbsp;&nbsp;海域宽阔，台风多、潮差大、流速急，具有典型的海洋性气候特征，有效工作日少；</li>
-                                        <li>&nbsp;&nbsp;软土层厚、持力层深，给海上基础设计和施工带来一系列问题；</li>
-                                        <li>&nbsp;&nbsp;南岸滩涂长，施工条件复杂，采用常规设计方案和施工方法很难满足工期要求；</li>
-                                        <li>&nbsp;&nbsp;环境的腐蚀作用严重；</li>
-                                        <li>&nbsp;&nbsp;南滩涂多个区域浅层气富集，危及施工安全。</li>
+                                        <li>从政治经济上</li>
+                                        <p>&emsp;&emsp;九眼桥的修建使得从前被府河和南河隔开的两岸能够亲密交流，增加并加速了商品在市场上的流通，促进了当地经济的发展。而如今，九眼桥地处成都市一环路，距离春熙路等大型商圈十分之近，同时周围又有四川大学、四川音乐大学等诸多年轻消费群体作为支撑，逐渐发展成为了九眼桥酒吧街这一著名标签，如今，这里的夜晚灯红酒绿，歌舞升平，每年吸引了许多游客慕名而来。年轻的消费群体不仅十分具有消费潜力，同时扩散性极强，极大带动了这一街区的经济发展。研究九眼桥，有助于我们了解这座城市吸引年轻人的独特魅力和古今融合的时尚气息。
+                                        </p>
+                                        <li>从历史文化上</li>
+                                        <p>&emsp;&emsp;九眼桥的最初修建并非布政使余一龙的一声令下，同时也有两岸州邑的物资捐助，明蜀王更是拿出了千金赞助，当朝的官员们也同样捐了部分俸禄。此项建桥工程由承奉司鹏荣监理，他把被盖卷搬到工地，与工匠们同甘苦。由此可见，在那个年代修筑一座桥梁是相当不易的，但也反映出了百姓齐心协力，众志成城的愚公精神，这种精神值得我们继承和发扬。</br>&emsp;&emsp;同时，九眼桥码头曾经热闹非凡，从岸边下到码头的小路上人山人海，卸货的搬夫、黄包车车夫、卖小吃的贩子等都聚集在了这里，码头上可谓是人声鼎沸。1953年为方便交通运输，政府将九眼桥拱形桥面改建为平坡桥面。直到八十年代后，由于劳务市场和旧书市场的兴起，九眼桥一带也依旧热闹。这里的人文气息影响了一代又一代成都人，组成了如今的巴蜀文化。</br>&emsp;&emsp;成都民间有很多关于九眼桥的传说，有张献忠“桥是弯弓塔是箭”的传说；有八仙之一的铁拐李从九眼桥上升天，在一块红沙石板上留下脚印的传说；有中间最高处的桥洞下面是“海眼”，可通大海的传说；有十兄弟弃恶从善背人过河等传说。这些传说都证明了九眼桥在成都历史上极具知名度，并被成都人所喜爱。同时，了解九眼桥也是在了解成都百姓的生活变化，了解中国民俗社会在历史巨轮下的不断发展。
+                                        </p>
+                                        <li>从自然风光上</li>
+                                        <p>&emsp;&emsp;锦江作为成都市最著名的一条河流，也可以被称之为成都的母亲河，对成都人来说意义非凡。成都市政府一直以来努力着力沿河及河流生态文明建设，例如打造步行绿道、湿地公园等等。而九眼桥这一流域更是风景独好，有许多市民常年在此处钓鱼、散步、运动等，因为这里不仅有清爽的河风，清澈的河面，更有高耸的古树和活泼的水鸟。研究一座古桥不仅仅是了解桥梁本身，更是了解它周围的生态环境和人文风光，从这里我们可以感受到现代百姓对生态的呵护和对健康美好生活的向往。
+                                        </p>
                                     </ol>
-
-
-
-                                    <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
-
-                                    <h4>工程建设难点</h4>
-                                    <div id="passage1">
-                                        <ol>
-                                            <li id="li1">
-                                                工程规模大、海上工程量大。大桥工程全长36公里，海上段长度达32公里。全桥总计混凝土245万立方，各类钢材82万吨，钢管桩5513根，钻孔桩3550根，承台1272个，墩身1428个，工程规模浩大。
-                                            </li>
-                                            <li>自然环境恶劣。潮差大、流速急、流向乱、波浪高、冲刷深、软弱地层厚，部分区段浅层气富集。其中，南岸10公里滩涂区干湿交替，海上工程
-
-                                                大部分为远岸作业，施工条件很差。受水文和气象影响，有效工作日少，据现场施工统计，海上施工作业年有效天数不足180天，滩涂区约250天。
-                                            </li>
-                                            <li>制定总体设计方案难度很大。设计要求新，其中水中区引桥(18.27公里)和南岸滩涂区引桥(10.1公里)，是整个工程的关键；结构防腐问题十分突出，且无规范可遵循；大桥运行期间，桥面行车环境受大风、浓雾、暴雨及驾驶员视觉疲劳等不利因素的影响，采取合理有效的设计对策是保障桥面行车安全的关键；设计方案涉及新材料、新工艺、新技术的应用以及多项大型专用设备的研制。
-                                                施工技术方面，面临着海上激流区高墩区大吨位箱梁的整体预制、运输及架设，宽滩涂区大吨位箱梁的长距离梁上运梁及架设，超长螺旋钢管桩的设计、防腐与沉桩施工等诸多施工关键技术的挑战；在测量控制方面，因桥梁长度超长，地球曲面效应引起的结构测量变形问题十分突出，受海洋环境制约，传统测量手段已无法满足施工精度和施工进度的要求，如何借助GPS技术实现快速、高效测量施工是一个制约全桥工期的核心技术问题。
-                                            </li>
-                                            <li>建设目标要求高、施工组织与运行管理难度大。大桥工程规模宏大，备受世人瞩目。建设之初，宁波市委市政府明确提出大桥工程要按照“三个一流目标”的标准来实施。面对复杂的建设环境，充满挑战的工程，组织和管理好大桥工程是摆在指挥部面前的巨大挑战。因工程施工作业点多、战线长，存在同步作业、交叉作业工序，施工组织难度大，工程质量、进度、安全及资金控制难度大。台风、大风、大潮、巨浪、急流、暴雨、大雾及雷电等气象水文条件，如何采取切实有效的工程控制与运行管理措施是工程管理上需要面对的新课题。
-                                            </li>
-                                        </ol>
-                                    </div>
-                                    <button id="button1" style="width: 100%;">展开</button>
-                                    <button id="button2" style="width: 100%;">收起</button>
-                                    <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
-                                    <div id="hide4">
-                                    <h4 id="title4">大桥亮点</h4>
-                                    <div id="passage4">
-                                        <p> 大桥36公里的长度，使之超过了美国切萨皮克海湾桥和巴林道堤桥等世界名桥，而成为目前世界上已建成或在建中的最长的跨海大桥。
-                                            据初步核定，大桥共需要钢材76.9万吨，水泥129.1万吨，石油沥青1.16万吨，木材1.91万立方米，混凝土240万立方米，各类桩基7000余根，为国内特大型桥梁之最。南滩涂50米*16米箱梁采用整孔预制，大型平板车梁上运梁的工艺，开创了国内外重型梁运架的新纪录。
-                                        </p>
-                                        <p> 水中区引桥70米*16米箱梁采用整孔制、运、架一体化方案，单片梁重达2180吨，为国内第一。水中区引桥打入钢管桩直径1.5-1.6米,桩长约80米,总数超过4000根,其钢管桩工程规模全国建桥史上第一。
-                                        </p>
-                                        <p> 大桥在设计中首次引入了景观设计的概念。景观设计师们借助西湖苏堤“长桥卧波”的美学理念，兼顾杭州湾水文环境特点，结合行车时司机和乘客的心理因素，确定了大桥总体布置原则。整座大桥平面为S形曲线，总体上看线形优美、生动活泼。从侧面看，在南北航道的通航孔桥处各呈一拱形，具有了起伏跌宕的立面形状。
-                                        </p>
-                                        <p> 在南航道再往南1．7公里，就在离南岸大约14公里处，有一个面积达1.2万平方米的海中平台。该平台在施工期间，将作为海上作业人员生活基地，海上救援、测量、通信、海事监控平台。大桥建成后，这一海中平台则是一个海中交通服务的救援平台，同时也是一个绝佳的旅游休闲观光台。&nbsp;
-                                        </p>
-                                    </div>
                                 </div>
-                                    <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
-
-                                    <h4>大桥特色</h4>
-                                    <p> 科技含量之高首先体现在施工工艺上。我们坚持尊重科学，依靠专家，广泛开展技术咨询和交流活动。根据专家意见提出了施工决定设计，采取预制化、工厂化、大型化、变海上施工为陆上施工的施工方案，突破了长期来设计决定施工的理念。预制吊装的最大构件为长70米、宽16米、高4.0米、重2180吨的预应力混凝土箱梁，最长的构件为长度84米、直径1.6米的超长钢管桩，这种构件可称得上是举世无双。为了减轻海水中氯离子对大桥钢材和混凝土的腐蚀，保证大桥100年的寿命，设计者专门研制了一整套防治海水腐蚀的有效方案。等等这些可见大桥工程的科技含量之高。
-                                    </p>
-                                    <p> 杭州湾跨海大桥将是一座&#8221;数字化大桥&#8221;。科研单位将利用硬件及接口技术、网络及数据库技术、图像图形技术、人工智能技术、计算数学、有限元技术、力学等多学科，建立一套大桥设计、建设及养管的科学评价体系，整座大桥将设置中央监视系统，平均每1公里就有1对监视器。这样，不仅大桥可进行科学合理的维护管理，而且大桥&#8221;身体&#8221;的健康状况也在实时掌握中。目前，本项目已向交通部申报17项大桥工程关键性科研立项项目，在国内桥梁界也是少见的。&nbsp;
-                                    </p>
-                                    <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
-                                    <h4>大桥之最</h4>
-                                    <ol>
-                                        <li>杭州湾跨海大桥全长36公里，其长度在目前世界上在建和己建的跨海大桥中位居第一。</li>
-                                        <li>杭州湾跨海大桥地处强腐蚀海洋环境，为确保大桥寿命，在国内第一次明确提出了设计使用寿命大于等于100年的耐久性要求。</li>
-                                        <li>杭州湾跨海大桥50米箱梁“梁上运架设”技术，架设运输重量从900吨提高到1430吨，刷新了目前世界上同类技术、同类地形地貌桥梁建设“梁上运架设”的新纪录。
-                                        </li>
-                                        <li>杭州湾跨海大桥深海区上部结构采用70米预应力砼箱梁整体预制和海上运架技术，为解决大型砼箱梁早期开裂的工程难题，开创性地提出并实施了“二次张拉技术”，彻底解决了这一工程“顽疾”。
-                                        </li>
-                                        <li>杭州湾跨海大桥钢管桩的最大直径1.6米，单桩最大长度89米，最大重量74吨，开创了国内外大直径超长整桩螺旋桥梁钢管桩之最。&nbsp;&nbsp;
-                                            6、杭州湾跨海大桥南岸10公里滩涂底下蕴藏着大量的浅层沼气，对施工安全构成严重威胁。在滩涂区的钻孔灌注桩施工中，开创性地采用有控制放气的安全施工工艺，其施工工艺为世界同类似地理条件之首。&nbsp;
-                                        </li>
-                                    </ol>
-                                    <!-- </div> -->
-                                </div><!-- .entry-content -->
-                            </article><!-- #post-99 -->
+                            </article>
                             <nav class="navigation post-navigation" aria-label="文章">
                                 <h2 class="screen-reader-text">文章导航</h2>
                                 <div class="nav-links">
                                     <div class="nav-previous">
-                                        <a href="./../桥梁名称" rel="prev">
+                                        <a href="./../2001年 银滩黄河大桥/" rel="prev">
                                             <span class="screen-reader-text">上一篇文章</span>
                                             <span aria-hidden="true" class="nav-subtitle">上一篇</span>
                                             <span class="nav-title"><span class="nav-title-icon-wrapper">
@@ -850,12 +771,12 @@
                                                         <use href="#icon-arrow-left" xlink:href="#icon-arrow-left">
                                                         </use>
                                                     </svg>
-                                                </span>xxxx大桥</span>
+                                                </span>银滩黄河大桥</span>
                                         </a>
-                                        <!--修改为上一篇桥梁名称以及链接-->
+
                                     </div>
                                     <div class="nav-next">
-                                        <a href="https://www.baidu.com" rel="prev">
+                                        <a href="./../2008年 杭州湾跨海大桥/" rel="prev">
                                             <span class="screen-reader-text">下一篇文章</span>
                                             <span aria-hidden="true" class="nav-subtitle">下一篇</span>
                                             <span class="nav-title"><span class="nav-title-icon-wrapper">
@@ -863,16 +784,16 @@
                                                         <use href="#icon-arrow-right" xlink:href="#icon-arrow-right">
                                                         </use>
                                                     </svg>
-                                                </span>xxxxx大桥</span>
+                                                </span>杭州湾跨海大桥</span>
                                         </a>
-                                        <!--修改为下一篇桥梁名称以及链接-->
+
                                     </div>
                                 </div>
                             </nav>
-                        </main><!-- #main -->
-                    </div><!-- #primary -->
-                </div><!-- .wrap -->
-            </div><!-- #content -->
+                        </main>
+                    </div>
+                </div>
+            </div>
             <footer id="colophon" class="site-footer">
                 <div class="wrap">
                     <aside class="widget-area" aria-label="页脚">
@@ -896,11 +817,11 @@
                         </div>
                     </aside>
 
-                </div>.site-info -->
-        </div><!-- .wrap -->
-        </footer><!-- #colophon -->
-    </div><!-- .site-content-contain -->
-    </div><!-- #page -->
+                </div>
+        </div>
+        </footer>
+    </div>
+    </div>
     <script id='twentyseventeen-skip-link-focus-fix-js-extra'>
         var twentyseventeenScreenReaderText = { "quote": "<svg class=\"icon icon-quote-right\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-quote-right\" xlink:href=\"#icon-quote-right\"><\/use> <\/svg>", "expand": "\u5c55\u5f00\u5b50\u83dc\u5355", "collapse": "\u6298\u53e0\u5b50\u83dc\u5355", "icon": "<svg class=\"icon icon-angle-down\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-angle-down\" xlink:href=\"#icon-angle-down\"><\/use> <span class=\"svg-fallback icon-angle-down\"><\/span><\/svg>" };
     </script>
