@@ -593,6 +593,12 @@
 
             );
 
+            $("#table2").hide();
+            $("#hide2").hover(
+                function () { $("#table2").slideDown(); },
+                function () { $("#table2").slideUp(); }
+            );
+
             $(".nav-next").click(
                 function () {
                     i = i + 1;
@@ -808,17 +814,17 @@
                                     <p>&emsp;&emsp;主桥长803.48米，桥面宽25.
                                         5米，主跨2孔、跨径133米，副跨19孔、跨径40米，采用单塔斜拉结构，塔高79米，共124根斜拉索，索长32～140米，主桥桩呈“H”形，主桥桩的两边各有30对钢丝绳斜拉在主桥桩上，形成一个等腰三角形。三角形具有稳定性，设计师也许正是利用这个原理而设计的。主桥墩两边各有16个引桥墩。
                                     </p>
-                                    <table cellpadding="130" style="margin: 10px 0 15px 0;
-                                    display: block;
-                                    width: 100%;
-                                    overflow: auto;
-                                    word-break: normal;
-                                    word-break: keep-all;">
-                                  
-                                            <tr>
-                                                <th>技术标准</th>
-                                            </tr>
-
+                                    
+                                    <div id="hide2">
+                                        <h4 id="title1">技术标准</h4>
+                                        <table id="table2" style="margin: 10px 0 15px 0;
+                                            display: block;
+                                            width: 100%;
+                                            overflow: auto;
+                                            word-break: normal;
+                                            word-break: keep-all;">
+                                            
+                                            </tbody>
                                             <tr>
                                                 <td>
                                                     公路等级
@@ -851,7 +857,7 @@
                                                     汽车—超20级，挂车—120
                                                 </td>
                                             </tr>
-                                            tr>
+                                      
                                             <td>
                                                 坡度系数
                                             </td>
@@ -914,8 +920,9 @@
                                                     基本烈度VI度
                                                 </td>
                                             </tr>
-                      
-                                    </table>
+
+                                        </table>
+                                    </div>
                                 </div>
                             </article>
                             <nav class="navigation post-navigation" aria-label="文章">
