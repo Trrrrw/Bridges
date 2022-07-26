@@ -57,7 +57,7 @@
             width: 6em;
             height: 6em;
             margin-top: -3em;
-            background-image: url("./img/arrow.svg");
+            background-image: url("./../../img/arrow.svg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -540,7 +540,7 @@
     <link rel='stylesheet' id='twentyseventeen-style-css' href='./css/twentyseventeen-style.css' media='all' />
     <link rel='stylesheet' id='twentyseventeen-block-style-css' href='./css/twentyseventeen-assets-css-blocks.css'
         media='all' />
-    <!--[if lt IE 9]> <link rel='stylesheet' id='twentyseventeen-ie8-css'  href='http://localhost/wordpress/wp-content/themes/twentyseventeen/assets/css/ie8.css?ver=20161202' media='all' /> <![endif]-->
+    
     <script>
         /* <![CDATA[ */
         var rcewpp = {
@@ -552,7 +552,7 @@
         };
             /* ]]\> */
     </script>
-    <!--[if lt IE 9]> <script src='http://localhost/wordpress/wp-content/themes/twentyseventeen/assets/js/html5.js?ver=20161020' id='html5-js'></script> <![endif]-->
+    
     <script src='./js/jquery-jquery.min.js' id='jquery-core-js'></script>
     <script src='./js/jquery-jquery-migrate.min.js' id='jquery-migrate-js'></script>
     <link rel="https://api.w.org/" href="http://localhost/wordpress/wp-json/" />
@@ -576,16 +576,18 @@
         content="http://localhost/wordpress/wp-content/uploads/2022/07/cropped-NAU.png" />
 
 
-    <!-- JQuery.js -->
+    
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
         var i = 0;
-        var max = 2;//图片数量-1
+        var max = 4;//图片数量-1
         var min = 0;
         var imgs = new Array();
         imgs[0] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-011.webp";
         imgs[1] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-010.webp";
-        imgs[2] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-009.webp";
+        imgs[2] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-004.webp";
+        imgs[3] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-002.webp";
+        imgs[4] = "https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-001.webp";
         $(document).ready(function () {
             
 
@@ -614,7 +616,7 @@
             );
             $("#Loadmod").click(
                 function () {
-                    window.open("https://www.baidu.com", "_blank", "resizable,scrollbars,status");
+                    window.open("./model", "_blank", "resizable,scrollbars,status");
                 }
 
             );
@@ -654,12 +656,12 @@
                 <div class="site-branding">
                     <div class="wrap">
                         <div class="site-branding-text">
-                            <p class="site-title"><a href="http://localhost/wordpress/" rel="home">“桥”见中国，“智”见未来</a></p>
+                            <p class="site-title"><a href="./../../" rel="home">“桥”见中国，“智”见未来</a></p>
                             <p class="site-description"><strong>南京农业大学·人工智能学院</strong></p>
-                        </div><!-- .site-branding-text -->
-                    </div><!-- .wrap -->
-                </div><!-- .site-branding -->
-            </div><!-- .custom-header -->
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="navigation-top">
                 <div class="wrap">
                     <nav id="site-navigation" class="main-navigation" aria-label="顶部菜单"> <button class="menu-toggle"
@@ -673,11 +675,11 @@
                             <ul id="top-menu" class="menu">
                                 <li id="menu-item-29"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-29">
-                                    <a href="./../../index.html">首页</a>
+                                    <a href="./../../">首页</a>
                                 </li>
                                 <li id="menu-item-31"
                                     class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-31">
-                                    <a href="./../index.html">桥梁</a>
+                                    <a href="./../">桥梁</a>
                                 </li>
                                 <li id="menu-item-74"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a
@@ -685,13 +687,13 @@
                                         href="./../../model/">模型</a></li>
                                 <li id="menu-item-30"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a
-                                        href="./../../about/index.html">关于</a></li>
+                                        href="./../../about/">关于</a></li>
                             </ul>
                         </div>
-                    </nav><!-- #site-navigation -->
-                </div><!-- .wrap -->
-            </div><!-- .navigation-top -->
-        </header><!-- #masthead -->
+                    </nav>
+                </div>
+            </div>
+        </header>
 
         <div class="site-content-contain">
             <div id="content" class="site-content">
@@ -708,7 +710,7 @@
                             src="https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/2011-山东青岛城阳区-胶州湾大桥-011.webp"
                             class="attachment-twentyseventeen-featured-image size-twentyseventeen-featured-image wp-post-image"
                             alt="" loading="lazy" sizes="100vw" />
-                    </div><!-- .single-featured-image-header -->
+                    </div>
 
                     <aside id="secondary" class="widget-area" aria-label="博客边栏">
                         <button id="Loadmod" style="width: 100%;">查看模型</button>
@@ -746,7 +748,7 @@
                         </section>
                         <section id="block-8" class="widget widget_block">
                         </section>
-                    </aside><!-- #secondary -->
+                    </aside>
 
                     <div id="primary" class="content-area">
                         <main id="main" class="site-main">
@@ -763,7 +765,7 @@
                                     <h4 id="title0">意义</h4>
                                     <p>&emsp;&emsp;显著缓解青岛胶州湾高速公路的交通压力，进一步完善青岛市东西跨海交通联系，扩大青岛市城市骨架，缩小青岛、红岛、黄岛的时空距离，加强主城区与两翼副城区的联系，塑造拥抱胶州湾的大青岛城市框架，为青岛城市的深度发展拓展出崭新空间，同时，胶州湾大桥结构新颖、造型独特、美观大气，三座航道桥与蜿蜒的非通航孔桥、海上互通立交等共同谱写了一部气势磅礴的桥梁组曲，既与青岛市的城市及建筑风格相呼应，又富有现代的气息，是国际屈指可数的现代化桥梁集群工程，该桥建成后将成为青岛市的又一标志性建筑，为中国桥梁史再添辉煌的一页。
                                     </p>
-                                    <!-- <div class="passage-wide"> -->
+                                    
                                     <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" />
                                     <h4 id="title1">工程环境特点</h4>
 
@@ -834,14 +836,14 @@
                                             6、杭州湾跨海大桥南岸10公里滩涂底下蕴藏着大量的浅层沼气，对施工安全构成严重威胁。在滩涂区的钻孔灌注桩施工中，开创性地采用有控制放气的安全施工工艺，其施工工艺为世界同类似地理条件之首。&nbsp;
                                         </li>
                                     </ol>
-                                    <!-- </div> -->
-                                </div><!-- .entry-content -->
-                            </article><!-- #post-99 -->
+                                    
+                                </div>
+                            </article>
                             <nav class="navigation post-navigation" aria-label="文章">
                                 <h2 class="screen-reader-text">文章导航</h2>
                                 <div class="nav-links">
                                     <div class="nav-previous">
-                                        <a href="./../桥梁名称" rel="prev">
+                                        <a href="./../2011年 崇启大桥/" rel="prev">
                                             <span class="screen-reader-text">上一篇文章</span>
                                             <span aria-hidden="true" class="nav-subtitle">上一篇</span>
                                             <span class="nav-title"><span class="nav-title-icon-wrapper">
@@ -849,12 +851,12 @@
                                                         <use href="#icon-arrow-left" xlink:href="#icon-arrow-left">
                                                         </use>
                                                     </svg>
-                                                </span>xxxx大桥</span>
+                                                </span>崇启大桥</span>
                                         </a>
-                                        <!--修改为上一篇桥梁名称以及链接-->
+                                        
                                     </div>
                                     <div class="nav-next">
-                                        <a href="https://www.baidu.com" rel="prev">
+                                        <a href="./../2014年 深安黄河大桥/" rel="prev">
                                             <span class="screen-reader-text">下一篇文章</span>
                                             <span aria-hidden="true" class="nav-subtitle">下一篇</span>
                                             <span class="nav-title"><span class="nav-title-icon-wrapper">
@@ -862,16 +864,16 @@
                                                         <use href="#icon-arrow-right" xlink:href="#icon-arrow-right">
                                                         </use>
                                                     </svg>
-                                                </span>xxxxx大桥</span>
+                                                </span>深安黄河大桥</span>
                                         </a>
-                                        <!--修改为下一篇桥梁名称以及链接-->
+                                        
                                     </div>
                                 </div>
                             </nav>
-                        </main><!-- #main -->
-                    </div><!-- #primary -->
-                </div><!-- .wrap -->
-            </div><!-- #content -->
+                        </main>
+                    </div>
+                </div>
+            </div>
             <footer id="colophon" class="site-footer">
                 <div class="wrap">
                     <aside class="widget-area" aria-label="页脚">
@@ -896,10 +898,10 @@
                     </aside>
 
                 </div>.site-info -->
-        </div><!-- .wrap -->
-        </footer><!-- #colophon -->
-    </div><!-- .site-content-contain -->
-    </div><!-- #page -->
+        </div>
+        </footer>
+    </div>
+    </div>
     <script id='twentyseventeen-skip-link-focus-fix-js-extra'>
         var twentyseventeenScreenReaderText = { "quote": "<svg class=\"icon icon-quote-right\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-quote-right\" xlink:href=\"#icon-quote-right\"><\/use> <\/svg>", "expand": "\u5c55\u5f00\u5b50\u83dc\u5355", "collapse": "\u6298\u53e0\u5b50\u83dc\u5355", "icon": "<svg class=\"icon icon-angle-down\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-angle-down\" xlink:href=\"#icon-angle-down\"><\/use> <span class=\"svg-fallback icon-angle-down\"><\/span><\/svg>" };
     </script>
