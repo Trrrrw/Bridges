@@ -10,6 +10,218 @@
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//s.w.org' />
     <style>
+        #map {
+            width: 100% !important;
+            height: auto;
+            position: relative;
+        }
+
+        #mapbg {
+            width: 100%;
+        }
+
+        .Province {
+            position: absolute;
+        }
+
+        #YN {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #YN:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #NMG {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #NMG:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #BJTJ {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #BJTJ:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #JL {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #JL:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #SC {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #SC:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #SD {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #SD:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #SX {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #SX:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #GX {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #GX:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #JSSH {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #JSSH:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #HB {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #HB:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #HN {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #HN:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #ZJ {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #ZJ:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #HN {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #HN:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #GS {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #GS:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #CQ {
+            width: 17.53%;
+            left: 39.25%;
+            top: 69%;
+            opacity: 0.3;
+        }
+
+        #CQ:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #HLJ {
+            width: 22.4%;
+            left: 77.58%;
+            top: 0;
+            opacity: 0.3;
+        }
+
+        #HLJ:hover{
+            animation:hovered 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes hovered{
+            from{opacity: 0.3;}
+            to{opacity: 1;}
+        }
+    </style>
+    <style>
         img.wp-smiley,
         img.emoji {
             display: inline !important;
@@ -481,6 +693,19 @@
     <link rel="apple-touch-icon" href="http://localhost/wordpress/wp-content/uploads/2022/07/cropped-NAU.png" />
     <meta name="msapplication-TileImage"
         content="http://localhost/wordpress/wp-content/uploads/2022/07/cropped-NAU.png" /> -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //$("#HLJ").hide();
+        });
+        window.onload = function () {
+            var el = window.document.body; //声明一个变量，默认值为body
+            window.document.body.onmouseover = function (event) {
+                el = event.target; //鼠标每经过一个元素，就把该元素赋值给变量el
+                console.log('当前鼠标在', el, '元素上'); //在控制台中打印该变量
+            }
+        }
+    </script>
 </head>
 
 <body class="page-template-default page page-id-19 wp-embed-responsive has-header-image page-two-column colors-light">
@@ -503,7 +728,7 @@
                     </div>
                 </div>
             </div>
-            <div class="navigation-top" style="position: static;">
+            <div class="navigation-top">
                 <div class="wrap">
                     <nav id="site-navigation" class="main-navigation" aria-label="顶部菜单"> <button class="menu-toggle"
                             aria-controls="top-menu" aria-expanded="false"> <svg class="icon icon-bars"
@@ -536,7 +761,25 @@
                 </div>
             </div>
         </header>
-        <img src="../img/map.png">
+        <div id="map">
+            <img class="Province" id="YN" src="../img/云南.png">
+            <img class="Province" id="NMG" src="../img/内蒙古.png">
+            <img class="Province" id="BJTJ" src="../img/北京天津.png">
+            <img class="Province" id="JL" src="../img/吉林.png">
+            <img class="Province" id="SC" src="../img/四川.png">
+            <img class="Province" id="SD" src="../img/山东.png">
+            <img class="Province" id="SX" src="../img/山西.png">
+            <img class="Province" id="GX" src="../img/广西.png">
+            <img class="Province" id="JSSH" src="../img/江苏上海.png">
+            <img class="Province" id="HB" src="../img/河北.png">
+            <img class="Province" id="HN" src="../img/河南.png">
+            <img class="Province" id="ZJ" src="../img/浙江.png">
+            <img class="Province" id="HN" src="../img/湖南.png">
+            <img class="Province" id="GS" src="../img/甘肃.png">
+            <img class="Province" id="CQ" src="../img/重庆.png">
+            <img class="Province" id="HLJ" src="../img/黑龙江.png">
+            <img id="mapbg" src="../img/map.png">
+        </div>
     </div>
     <script id='twentyseventeen-skip-link-focus-fix-js-extra'>
         var twentyseventeenScreenReaderText = { "quote": "<svg class=\"icon icon-quote-right\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-quote-right\" xlink:href=\"#icon-quote-right\"><\/use> <\/svg>", "expand": "\u5c55\u5f00\u5b50\u83dc\u5355", "collapse": "\u6298\u53e0\u5b50\u83dc\u5355", "icon": "<svg class=\"icon icon-angle-down\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-angle-down\" xlink:href=\"#icon-angle-down\"><\/use> <span class=\"svg-fallback icon-angle-down\"><\/span><\/svg>" };
