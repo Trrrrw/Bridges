@@ -55,7 +55,7 @@
         const near = 0.1;
         const far = 100;
         const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-        camera.position.set(0, 10, 20);//相机默认位置
+        camera.position.set(-20, 10, 40);//相机默认位置
 
         //控制器
         const controls = new OrbitControls(camera, canvas);
@@ -69,8 +69,8 @@
             const planeSize = 400;//载物台大小
 
             const loader = new THREE.TextureLoader();
-            const texture = loader.load('../../../img/dirt.png');//载物台贴图
-            //https://threejs.org/manual/examples/resources/images/checker.png
+            const texture = loader.load('https://threejs.org/manual/examples/resources/images/checker.png');//载物台贴图
+            //../../../img/dirt.png
             texture.encoding = THREE.sRGBEncoding;
             texture.wrapS = THREE.RepeatWrapping;
             texture.wrapT = THREE.RepeatWrapping;
@@ -96,18 +96,18 @@
             scene.add(light);
         }
 
-        {//天空盒
-            const loader = new THREE.CubeTextureLoader()
-            const texture = loader.load([
-                '../../../img/neg-y.png',
-                '../../../img/pos-y.png',
-                '../../../img/pos-z.png',
-                '../../../img/neg-z.png',
-                '../../../img/pos-x.png',
-                '../../../img/neg-x.png'
-            ])
-            scene.background = texture
-        }
+        // {//天空盒
+        //     const loader = new THREE.CubeTextureLoader()
+        //     const texture = loader.load([
+        //         '../../../img/neg-y.png',
+        //         '../../../img/pos-y.png',
+        //         '../../../img/pos-z.png',
+        //         '../../../img/neg-z.png',
+        //         '../../../img/pos-x.png',
+        //         '../../../img/neg-x.png'
+        //     ])
+        //     scene.background = texture
+        // }
 
         {
             /*平行光，平行光是沿着特定方向发射的光。
@@ -115,7 +115,7 @@
             常常用平行光来模拟太阳光的效果; 
             太阳足够远，因此我们可以认为太阳的位置是无限远，所以我们认为从太阳发出的光线也都是平行的。*/
             const color = 0xFFFFFF;
-            const intensity = 1;
+            const intensity = 0.8;
             const light = new THREE.DirectionalLight(color, intensity);
             light.position.set(5, 10, 2);
             scene.add(light);
@@ -147,7 +147,7 @@
                     // scene.add(obj4);
 
                     //修改模型大小
-                    root.scale.set(-5, -5, -5);
+                    root.scale.set(0.02, 0.02, 0.02);
                     // obj1.scale.set(3, 3, 3);
                     // obj2.scale.set(3, 3, 3);
                     // obj3.scale.set(3, 3, 3);
@@ -155,7 +155,7 @@
 
                     //修改模型的位置
                     //钱塘江-36；昆明圆通大桥-21；
-                    root.position.set(0, 0, 0);
+                    root.position.set(30, 0, 0);
                     // obj1.position.set(0, 1, -18);
                     // obj2.position.set(0, 1, 18);
                     // obj3.position.set(0, 1, 36);
