@@ -9,6 +9,7 @@
     <title>关于 &#8211; “桥”见中国，“智”见未来</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="stylesheet" type="text/css" href="./css/window.css">
     <style>
         #map {
             width: 100% !important;
@@ -51,7 +52,7 @@
 
         #JL {
             width: 16.65%;
-            left:81.25%;
+            left: 81.25%;
             top: 19.15%;
         }
 
@@ -64,7 +65,7 @@
         #SD {
             width: 12.83%;
             left: 73.40%;
-            top:42.7%;
+            top: 42.7%;
             z-index: 98;
         }
 
@@ -89,7 +90,7 @@
         #HB {
             width: 10.75%;
             left: 70%;
-            top:30.5%;
+            top: 30.5%;
         }
 
         #HN {
@@ -611,9 +612,8 @@
     <meta name="msapplication-TileImage"
         content="http://localhost/wordpress/wp-content/uploads/2022/07/cropped-NAU.png" /> -->
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
-            //$("#HLJ").hide();
         });
         window.onload = function () {
             var el = window.document.body; //声明一个变量，默认值为body
@@ -622,7 +622,9 @@
                 console.log('当前鼠标在', el, '元素上'); //在控制台中打印该变量
             }
         }
-    </script>
+    </script> -->
+    <script src="./js/window.js" type="text/javascript"></script>
+
 </head>
 
 <body class="page-template-default page page-id-19 wp-embed-responsive has-header-image page-two-column colors-light">
@@ -679,23 +681,37 @@
             </div>
         </header>
         <div id="map">
-            <a href="../bridge" target="_self"><img class="Province" id="YN" src="../img/云南.png"></a>
-            <a href="../bridge/1983年 包头黄河大桥/" target="_self"><img class="Province" id="NMG" src="../img/内蒙古.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="BJTJ" src="../img/北京天津.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="JL" src="../img/吉林.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="SC" src="../img/四川.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="SD" src="../img/山东.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="SX" src="../img/山西.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="GX" src="../img/广西.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="JSSH" src="../img/江苏上海.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="HB" src="../img/河北.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="HN" src="../img/河南.png"></a>
-            <a href="../bridge/2008年 杭州湾跨海大桥/" target="_self"><img class="Province" id="ZJ" src="../img/浙江.png"></a>
-            <a href="../bridge/1971年 橘子洲大桥/" target="_self"><img class="Province" id="HUN" src="../img/湖南.png"></a>
-            <a href="../bridge/2015年 千厮门嘉陵江大桥/" target="_self"><img class="Province" id="GS" src="../img/甘肃.png"></a>
-            <a href="../bridge" target="_self"><img class="Province" id="CQ" src="../img/重庆.png"></a>
-            <a href="../bridge/2019年 中俄黑龙江大桥/" target="_self"><img class="Province" id="HLJ" src="../img/黑龙江.png"></a>
+            <a><img class="Province" id="YN" src="../img/云南.png" onclick="show(id)"></a>
+            <a><img class="Province" id="NMG" src="../img/内蒙古.png" onclick="show(id)"></a>
+            <a><img class="Province" id="BJTJ" src="../img/北京天津.png" onclick="show(id)"></a>
+            <a><img class="Province" id="JL" src="../img/吉林.png" onclick="show(id)"></a>
+            <a><img class="Province" id="SC" src="../img/四川.png" onclick="show(id)"></a>
+            <a><img class="Province" id="SD" src="../img/山东.png" onclick="show(id)"></a>
+            <a><img class="Province" id="SX" src="../img/山西.png" onclick="show(id)"></a>
+            <a><img class="Province" id="GX" src="../img/广西.png" onclick="show(id)"></a>
+            <a><img class="Province" id="JSSH" src="../img/江苏上海.png" onclick="show(id)"></a>
+            <a><img class="Province" id="HB" src="../img/河北.png" onclick="show(id)"></a>
+            <a><img class="Province" id="HN" src="../img/河南.png" onclick="show(id)"></a>
+            <a><img class="Province" id="ZJ" src="../img/浙江.png" onclick="show(id)"></a>
+            <a><img class="Province" id="HUN" src="../img/湖南.png" onclick="show(id)"></a>
+            <a><img class="Province" id="GS" src="../img/甘肃.png" onclick="show(id)"></a>
+            <a><img class="Province" id="CQ" src="../img/重庆.png" onclick="show(id)"></a>
+            <a><img class="Province" id="HLJ" src="../img/黑龙江.png" onclick="show(id)"></a>
             <img id="mapbg" src="../img/map.png">
+            <!-- 弹窗遮罩层 -->
+            <div class="dialog">
+                <!-- 弹窗内容 -->
+                <div class="content">
+                    <div class="aclose">
+                        <span>标题</span>
+                        <a class="close" href="javascript:close();">&times;</a>
+                    </div>
+                    <div class="contain">
+                        弹窗具体内容
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <script id='twentyseventeen-skip-link-focus-fix-js-extra'>
