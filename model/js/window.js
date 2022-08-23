@@ -6,11 +6,12 @@ function show(id) {
             // 修改弹窗标题
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("云南");
             // 修改内容，支持html
-            $(".contain").html("<button>圆通大桥</button>");
+            $(".contain").html("<div class=\"qwe\"><img src=\"./../img/map.png\" class=\"image\"/>" +
+                "<button>圆通大桥</button></div>");
             break;
         case "NMG":
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("内蒙古");
-            $(".contain").html("<button>包头黄河大桥</button><button>乌海湖大桥</button>");
+            $(".contain").html("<div class=\"qwe\"><a target=\"_blank\" href=\"https://www.baidu.com\"><img src=\"./../img/neg-x.png\"  class=\"image\"/></a><p id=\"loadmod\"> 乌海湖大桥 </p><img src=\"./../img/map.png\" class=\"image\"/><p> 乌海湖大桥 </p>");
             break;
         case "BJTJ":
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("北京、天津");
@@ -44,27 +45,27 @@ function show(id) {
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("河北");
             $(".contain").html("<button>彩虹桥</button>");
             break;
-            case "HN":
+        case "HN":
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("河南");
             $(".contain").html("<button>黄河公路大桥</button><button>许昌北海大桥</button>");
             break;
-            case "ZJ":
+        case "ZJ":
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("浙江");
             $(".contain").html("<button>钱塘江大桥</button><button>杭州湾跨海大桥</button>");
             break;
-            case "HUN":
+        case "HUN":
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("湖南");
             $(".contain").html("<button>橘子洲大桥</button><button>南津渡大桥</button>");
             break;
-            case "GS":
+        case "GS":
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("甘肃");
             $(".contain").html("<button>银滩黄河大桥</button><button>深安黄河大桥</button>");
             break;
-            case "CQ":
+        case "CQ":
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("重庆");
             $(".contain").html("<button>千厮门嘉陵江大桥</button>");
             break;
-            case "HLJ":
+        case "HLJ":
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("黑龙江");
             $(".contain").html("<button>中俄黑龙江大桥</button>");
             break;
@@ -77,3 +78,11 @@ function close() {
     var show = $(".dialog").css("display");
     $(".dialog").css("display", show == "none" ? "block" : "none");
 }
+$(document).ready(function () {
+    $("#loadmod").click(
+        function () {
+            window.open("https://www.baidu.com", "_blank", "resizable,scrollbars,status");
+        }
+
+    );
+    });
