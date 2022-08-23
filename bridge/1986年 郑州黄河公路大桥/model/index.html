@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/NAU.webp">
+    <title>Three.js - Load .OBJ and .MTL file - Fixed</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        #c {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+    <script type="importmap">{
+	"imports": {
+		"three": "https://threejs.org/build/three.module.js"
+	}
+}</script><!-- Remove this when import maps will be widely supported -->
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+</body>
+<script type="module">
+    // Three.js - Load .OBJ and .MTL file - Fixed
+    // from https://threejs.org/manual/examples/load-obj-materials-fixed.html
+
+
+    import * as THREE from 'three';
+    import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+    import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js';
+    import { MTLLoader } from 'https://threejs.org/examples/jsm/loaders/MTLLoader.js';
+
+    function main() {
+        const canvas = document.querySelector('#c');
+        const renderer = new THREE.WebGLRenderer({
+            canvas,
+            antialias: true,
+            alpha: true
+        });
+        renderer.outputEncoding = THREE.sRGBEncoding;
+
+        //下面4个都是相机属性
+        const fov = 45;
+        const aspect = 2;  // the canvas default
+        const near = 0.1;
+        const far = 100;
+        const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+        camera.position.set(0, 10, 20);//相机默认位置
+
+        //控制器
+        const controls = new OrbitControls(camera, canvas);
+        controls.target.set(0, 5, 0);
+        controls.update();
+
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color('black');
+
+        {
+            const planeSize = 400;//载物台大小
+
+            const loader = new THREE.TextureLoader();
+            const texture = loader.load('../../../img/dirt.png');//载物台贴图
+            //https://threejs.org/manual/examples/resources/images/checker.png
+            texture.encoding = THREE.sRGBEncoding;
+            texture.wrapS = THREE.RepeatWrapping;
+            texture.wrapT = THREE.RepeatWrapping;
+            texture.magFilter = THREE.NearestFilter;
+            const repeats = planeSize / 2;
+            texture.repeat.set(repeats, repeats);
+
+            const planeGeo = new THREE.PlaneGeometry(planeSize, planeSize);
+            const planeMat = new THREE.MeshPhongMaterial({
+                map: texture,
+                side: THREE.DoubleSide,
+            });
+            const mesh = new THREE.Mesh(planeGeo, planeMat);
+            mesh.rotation.x = Math.PI * -.5;
+            scene.add(mesh);
+        }
+
+        {//半球光，光源直接放置于场景之上，光照颜色从天空光线颜色渐变到地面光线颜色。
+            const skyColor = 0xB1E1FF;  // light blue 上半球发出光线的颜色0xB1E1FF
+            const groundColor = 0xB97A20;  // brownish orange 下半球发出光线的颜色0xB97A20
+            const intensity = 1;
+            const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
+            scene.add(light);
+        }
+
+        {//天空盒
+            const loader = new THREE.CubeTextureLoader()
+            const texture = loader.load([
+                '../../../img/neg-y.png',
+                '../../../img/pos-y.png',
+                '../../../img/pos-z.png',
+                '../../../img/neg-z.png',
+                '../../../img/pos-x.png',
+                '../../../img/neg-x.png'
+            ])
+            scene.background = texture
+        }
+
+        {
+            /*平行光，平行光是沿着特定方向发射的光。
+            这种光的表现像是无限远,从它发出的光线都是平行的。
+            常常用平行光来模拟太阳光的效果; 
+            太阳足够远，因此我们可以认为太阳的位置是无限远，所以我们认为从太阳发出的光线也都是平行的。*/
+            const color = 0xFFFFFF;
+            const intensity = 1;
+            const light = new THREE.DirectionalLight(color, intensity);
+            light.position.set(5, 10, 2);
+            scene.add(light);
+            scene.add(light.target);
+        }
+
+        {//https://threejs.org/manual/examples/resources/models/windmill/windmill-fixed.mtl
+            //加载材质
+            const mtlLoader = new MTLLoader();
+            mtlLoader.load('../../../model/cube.mtl', (mtl) => {
+                mtl.preload();
+                //加载模型
+                const objLoader = new OBJLoader();
+                mtl.materials.Material.side = THREE.DoubleSide;
+                objLoader.setMaterials(mtl);
+                objLoader.load('../../../model/2001-兰州-银滩黄河大桥.obj', (root) => {
+
+                    //克隆模型
+                    var obj1 = root.clone();
+                    var obj2 = root.clone();
+                    var obj3 = root.clone();
+                    var obj4 = root.clone();
+
+                    //向场景中添加模型
+                    scene.add(root);
+                    scene.add(obj1);
+                    scene.add(obj2);
+                    scene.add(obj3);
+                    scene.add(obj4);
+
+                    //修改模型大小
+                    root.scale.set(3, 3, 3);
+                    obj1.scale.set(3, 3, 3);
+                    obj2.scale.set(3, 3, 3);
+                    obj3.scale.set(3, 3, 3);
+                    obj4.scale.set(3, 3, 3);
+
+                    //修改模型的位置
+                    //钱塘江-36；昆明圆通大桥-21；
+                    root.position.set(0, 1, 0);
+                    obj1.position.set(0, 1, -18);
+                    obj2.position.set(0, 1, 18);
+                    obj3.position.set(0, 1, 36);
+                    obj4.position.set(0, 1, -36);
+
+                });
+            });
+        }
+
+        function resizeRendererToDisplaySize(renderer) {
+            const canvas = renderer.domElement;
+            const width = canvas.clientWidth;
+            const height = canvas.clientHeight;
+            const needResize = canvas.width !== width || canvas.height !== height;
+            if (needResize) {
+                renderer.setSize(width, height, false);
+            }
+            return needResize;
+        }
+
+        function render() {
+
+            if (resizeRendererToDisplaySize(renderer)) {
+                const canvas = renderer.domElement;
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+            }
+
+            renderer.render(scene, camera);
+
+            requestAnimationFrame(render);
+        }
+
+        requestAnimationFrame(render);
+    }
+
+    main();
+
+</script>
+
+</html>
