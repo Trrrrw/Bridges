@@ -7,7 +7,7 @@ function show(id) {
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("云南");
             // 修改内容，支持html
             $(".contain").html("<div class=\"qwe\"><img src=\"./../img/map.png\" class=\"image\"/>" +
-                "<button>圆通大桥</button></div>");
+                "<a href=\"../../bridge/1991年 昆明圆通大桥\"><button>圆通大桥</button></div></a>");
             break;
         case "NMG":
             $("div.dialog:last-child > div.content > div.aclose:first-child > span:first-child").html("内蒙古");
@@ -78,11 +78,4 @@ function close() {
     var show = $(".dialog").css("display");
     $(".dialog").css("display", show == "none" ? "block" : "none");
 }
-$(document).ready(function () {
-    $("#loadmod").click(
-        function () {
-            window.open("https://www.baidu.com", "_blank", "resizable,scrollbars,status");
-        }
 
-    );
-    });
