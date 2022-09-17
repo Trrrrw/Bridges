@@ -69,7 +69,7 @@
             const planeSize = 400;//载物台大小
 
             const loader = new THREE.TextureLoader();
-            const texture = loader.load('img/dirt.png');//载物台贴图
+            const texture = loader.load('./../../img/dirt.png');//载物台贴图
             //https://threejs.org/manual/examples/resources/images/checker.png
             texture.encoding = THREE.sRGBEncoding;
             texture.wrapS = THREE.RepeatWrapping;
@@ -99,12 +99,12 @@
         {//天空盒
             const loader = new THREE.CubeTextureLoader()
             const texture = loader.load([
-                './img/neg-y.png',
-                './img/pos-y.png',
-                './img/pos-z.png',
-                './img/neg-z.png',
-                './img/pos-x.png',
-                './img/neg-x.png'
+                '../../../img/neg-y.png',
+                '../../../img/pos-y.png',
+                '../../../img/pos-z.png',
+                '../../../img/neg-z.png',
+                '../../../img/pos-x.png',
+                '../../../img/neg-x.png'
             ])
             scene.background = texture
         }
@@ -131,7 +131,7 @@
                 const objLoader = new OBJLoader();
                 mtl.materials.Material.side = THREE.DoubleSide;
                 objLoader.setMaterials(mtl);
-                objLoader.load('https://cdn.statically.io/gh/Trrrrw/Bridges/blob/main/models/models/钱塘江大桥.obj', (root) => {
+                objLoader.load('../../../model/钱塘江大桥.obj', (root) => {
 
                     //克隆模型
                     var obj1 = root.clone();
